@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "7d63393b-f99e-461a-aaeb-7d3a2c182906",
+		"name": "PruebaLinktic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30693751"
+	},
+	"item": [
+		{
+			"name": "Linktic",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Linktic - Un amparo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_identificacion\": 1,\r\n    \"nro_identificacion\": 1193080568,\r\n    \"valor_asegurado\": 100000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/asegurado/calcularLiquidacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"asegurado",
+								"calcularLiquidacion"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tipo_identificacion\": 1,\n    \"numero_identificacion\": 1193080568,\n    \"valor_asegurado\": 100000,\n    \"liquidacion\": [\n        {\n            \"codigo_amparo\": 1,\n            \"nombre_amparo\": \"Muerte accidental\",\n            \"valor_prima\": 0.02304\n        }\n    ],\n    \"valor_total\": 2304\n}"
+				},
+				{
+					"name": "Linktic",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_identificacion\": 1,\r\n    \"nro_identificacion\": 12312412,\r\n    \"valor_asegurado\": 100000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/asegurado/calcularLiquidacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"asegurado",
+								"calcularLiquidacion"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tipo_identificacion\": 1,\n    \"numero_identificacion\": 12312412,\n    \"valor_asegurado\": 100000,\n    \"liquidacion\": [\n        {\n            \"codigo_amparo\": 1,\n            \"nombre_amparo\": \"Muerte accidental\",\n            \"valor_prima\": 0.02304\n        },\n        {\n            \"codigo_amparo\": 3,\n            \"nombre_amparo\": \"Auxilio funerario\",\n            \"valor_prima\": 0.12123\n        }\n    ],\n    \"valor_total\": 14427.0\n}"
+				}
+			]
+		}
+	]
+}
